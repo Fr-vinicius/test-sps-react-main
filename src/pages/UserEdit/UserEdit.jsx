@@ -4,6 +4,7 @@ import {
   deleteUserAPI,
   editUserInfoAPI,
   getUserInfoAPI,
+  getUsersAPI,
 } from "../../services/UserService";
 import "./styles.css";
 import { AuthContext } from "../../services/AuthContext";
@@ -83,9 +84,7 @@ const UserEdit = () => {
       if (response) {
         ShowSnackBar("Usuário removido com sucesso!");
         setIsModalOpen(false);
-        localStorage.removeItem("Token");
-        localStorage.removeItem("id");
-        if (!isAdm) logout();
+        isAdm ? getUsersAPI() && navigate("/Users") : logout();
       } else {
         ShowSnackBar("Não foi possível remover o usuário, tente novamente.");
       }
