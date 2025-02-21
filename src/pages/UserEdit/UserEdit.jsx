@@ -150,7 +150,7 @@ const UserEdit = () => {
               </label>
               <button
                 disabled={loading}
-                className="send-button"
+                className="user__send-button"
                 type="button"
                 onClick={handleEditUser}
               >
@@ -167,13 +167,9 @@ const UserEdit = () => {
                 {loading ? <span className="loader"></span> : "Excluir usuário"}
               </button>
               <Link
-                to={"/Users"}
+                to={isAdm ? "/Users" : "/User"}
                 disabled={loading}
-                className="delete-button"
-                type="button"
-                onClick={() => {
-                  setIsModalOpen(true);
-                }}
+                className="user__back-button"
               >
                 voltar
               </Link>
@@ -187,15 +183,19 @@ const UserEdit = () => {
             <h2 className="modal_text">Deseja deletar o usuário?</h2>
           </div>
           <div className="modal-footer">
-            <button className="send-button" onClick={handleDeleteUser}>
-              Confirmar
-            </button>
-            <button
-              className="modal-close"
-              onClick={() => setIsModalOpen(false)}
-            >
-              Cancelar
-            </button>
+            <div>
+              <button className="send-button" onClick={handleDeleteUser}>
+                Confirmar
+              </button>
+            </div>
+            <div>
+              <button
+                className="modal-close"
+                onClick={() => setIsModalOpen(false)}
+              >
+                Cancelar
+              </button>
+            </div>
           </div>
         </Modal>
       </div>

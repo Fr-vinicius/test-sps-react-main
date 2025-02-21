@@ -24,7 +24,7 @@
   margin-top: 10px;
   border-radius: 5px;
   cursor: pointer;
-  width: auto;
+  width: 100px;
 }
 .exit-button:hover {
   background: rgba(5, 85, 131, 0.884);

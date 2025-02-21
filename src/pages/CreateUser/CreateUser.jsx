@@ -1,52 +1,21 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import {
-  createUserAPI,
-  deleteUserAPI,
-  editUserInfoAPI,
-  getUserInfoAPI,
-} from "../../services/UserService";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { createUserAPI } from "../../services/UserService";
 import "./styles.css";
 import { AuthContext } from "../../services/AuthContext";
 import Snackbar from "../../components/Snackbar/Snackbar";
 
 const CreateUser = () => {
-  const [users, setUsers] = useState([]);
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [type, setType] = useState("");
   const [loading, setLoading] = useState(false);
   const [snackMessage, setSnackMessage] = useState("");
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const location = useLocation();
-  const userId = location.state?.userId;
-
-  const { userType, id } = useContext(AuthContext);
+  const { userType } = useContext(AuthContext);
   const isAdm = userType === "admin";
-  const { logout } = useContext(AuthContext);
   const navigate = useNavigate();
-
-  async function getUserInfo() {
-    setLoading(true);
-    try {
-      const response = await getUserInfoAPI(isAdm ? userId : id);
-      if (response) {
-        setUsers([response]);
-        setName(response.name);
-        setEmail(response.email);
-        setPassword(response.password);
-        setType(response.type);
-      } else {
-        ShowSnackBar("Usuário não encontrado.");
-      }
-    } catch (error) {
-      ShowSnackBar("Erro ao buscar usuário. Verifique o ID.");
-    } finally {
-      setLoading(false);
-    }
-  }
 
   async function handleCreateUser() {
     setLoading(true);
@@ -117,12 +86,19 @@ const CreateUser = () => {
               </label>
               <button
                 disabled={loading}
-                className="send-button"
+                className="create__send-button"
                 type="button"
                 onClick={handleCreateUser}
               >
                 {loading ? <span className="loader"></span> : "Salvar"}
               </button>
+              <Link
+                to={"/Users"}
+                disabled={loading}
+                className="create__back-button"
+              >
+                voltar
+              </Link>
             </form>
           </div>
         </div>

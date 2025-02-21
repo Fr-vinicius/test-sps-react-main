@@ -40,7 +40,7 @@ const Header = () => {
 
       {pathname !== "/" && token && (
         <button className="exit-button" onClick={handleLogout}>
-          sair
+          Sair
         </button>
       )}
     </div>

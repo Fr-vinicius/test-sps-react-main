@@ -8,7 +8,7 @@ function Users() {
     <div className="home">
       <div className="header__container">
         <h1>Clique para editar um usuário</h1>
-        <Link to={"/CreateUser"} className="send-button">
+        <Link to={"/CreateUser"} className="search-button">
           Criar novo usuário
         </Link>
       </div>

@@ -56,19 +56,14 @@
   flex-direction: column;
   gap: 5px;
 }
+
 .button__container {
   display: flex;
 
   justify-content: center;
   align-items: center;
 }
-.signIn-button {
-  gap: 5px;
-  width: 75px;
-  height: 30px;
-  justify-content: center;
-  align-items: center;
-}
+
 .label {
   color: black;
   font-weight: 400;
@@ -78,6 +73,7 @@
 .input {
   margin: 5px;
 }
+
 .signIn-button {
   display: flex;
   align-items: center;
@@ -88,7 +84,7 @@
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  background: #4caf50;
+  background: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -100,7 +96,6 @@
   cursor: not-allowed;
 }
 
-/* Loader (spinner) */
 .loader {
   border: 3px solid #f3f3f3;
   border-top: 3px solid #3498db;
@@ -110,7 +105,6 @@
   animation: spin 10s linear infinite;
 }
 
-/* Animação do spinner */
 @keyframes spin {
   0% {
     transform: rotate(0deg);

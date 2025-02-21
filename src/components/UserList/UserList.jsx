@@ -74,11 +74,11 @@ const UserList = () => {
             />
             <button
               disabled={userId.length < 15 || loading}
-              className="send-button"
+              className="find-button"
               type="button"
               onClick={getUserInfo}
             >
-              {loading ? <span className="loader"></span> : "Procurar"}
+              {loading ? <span className="loader"></span> : "Buscar"}
             </button>
           </div>
         )}
@@ -94,9 +94,13 @@ const UserList = () => {
               className="user-item"
               id={item.id}
             >
+              {isAdm && <p>Id: {item.id}</p>}
+
               <p>Nome: {item.name}</p>
               <p>Email: {item.email}</p>
-              <p>Tipo: {item.type}</p>
+              {isAdm && <p>Tipo: {item.type}</p>}
+
+              <p>Senha: {item.password}</p>
               {pathname === "/UserInfo" && <p>Senha: {item.password}</p>}
             </Link>
           ))

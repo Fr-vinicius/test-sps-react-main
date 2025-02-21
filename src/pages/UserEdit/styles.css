@@ -116,23 +116,42 @@
   margin-top: 10px;
   border-radius: 5px;
   cursor: pointer;
+  width: auto;
 }
 
-.send-button {
-  background: rgb(6, 248, 6);
+.user__send-button {
+  background-color: #06f806;
   color: white;
   border: none;
   padding: 8px 16px;
   margin-top: 10px;
   border-radius: 5px;
   cursor: pointer;
+  width: 125px;
+}
+.user__back-button {
+  background: rgba(10, 145, 223, 0.884);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  margin: 6px;
+}
+.user__back-button:hover {
+  background: rgba(5, 85, 131, 0.884);
+  text-decoration: none;
 }
 
 .delete-button:hover {
   background: #ff1e40;
 }
-.send-button:hover {
-  background: rgb(94, 236, 94);
+
+.user__send-button:hover {
+  background-color: rgb(17, 196, 17);
+  text-decoration: none;
 }
 
 .user-item {
@@ -146,6 +165,7 @@
   font-weight: 400;
   margin: 10px;
 }
+
 .search_container {
   border-radius: 15px;
   display: flex;
