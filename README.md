@@ -17,7 +17,7 @@ frontend do teste com tela de login, lista de usuários, criação de usuário, 
 ## Instalação
 
 1. Clone o repositório:
-   git clone https://github.com/seu-usuario/backend-imagens.git
+   git clone [https://github.com/seu-usuario/backend-imagens.git](https://github.com/Fr-vinicius/test-sps-react-main.git)
 
 2. Instale as dependências:
    npm install
