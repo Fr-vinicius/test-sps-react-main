@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.pageTitle {
+  font-size: 26px;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.exit-button {
+  background: rgba(10, 145, 223, 0.884);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+}
+.exit-button:hover {
+  background: rgba(5, 85, 131, 0.884);
+}

@@ -1,0 +1,53 @@
+:root {
+  --blue-50: hsl(192deg 80% 90%);
+  --blue-100: hsl(192deg 80% 85%);
+  --blue-200: hsl(192deg 80% 70%);
+  --blue-300: hsl(192deg 80% 60%);
+  --blue-400: hsl(192deg 80% 50%);
+  --blue-500: hsl(192deg 80% 45%);
+  --blue-600: hsl(192deg 80% 35%);
+  --blue-700: hsl(192deg 80% 25%);
+  --blue-800: hsl(192deg 80% 15%);
+  --blue-900: hsl(192deg 80% 10%);
+  --blue-950: hsl(192deg 80% 5%);
+  --blue-1000: hsl(192deg 80% 2.5%);
+  --blue-1000-25: hsl(192deg 80% 2.5% / 25%);
+
+  --transition-duration: 200ms;
+  --transition-function: ease;
+
+  --border-radius-s: 5px;
+  --border-radius-m: 10px;
+  --border-radius-l: 15px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blue-1000);
+  color: var(--blue-50);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}

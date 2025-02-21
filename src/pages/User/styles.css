@@ -1,0 +1,17 @@
+.home {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex: 1;
+  gap: 40px;
+  margin: 0 10px 10px;
+  border-radius: 15px;
+  flex-direction: column;
+  background-image: linear-gradient(
+    to bottom,
+    var(--blue-700),
+    var(--blue-200)
+  );
+}
